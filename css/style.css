@@ -1,0 +1,210 @@
+/*
+Theme Name: twentytwentythree-child
+Theme URI: 
+Author: 
+Author URI: 
+Description: 
+Requires at least: 6.0
+Tested up to: 6.2.1
+Requires PHP: 5.7
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Template: twentytwentythree
+Text Domain: twentytwentythreechild
+Tags: blog, news, portfolio, grid-layout, one-column, two-columns, three-columns, four-columns, left-sidebar, right-sidebar, wide-blocks, accessibility-ready, block-patterns, block-styles, buddypress, custom-background, custom-colors, custom-header, custom-logo, custom-menu, editor-style, featured-image-header, featured-images, flexible-header, footer-widgets, front-page-post-form, full-site-editing, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, style-variations, template-editing, theme-options, threaded-comments, translation-ready, 
+*/
+
+.wp-site-blocks {
+    padding: 0;
+}
+
+footer.wp-block-template-part {
+    margin: 0;
+}
+
+.results {
+    position: absolute;
+    z-index: 99999;
+    background: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+div#matches-container {
+    display: none;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin-top: 0;
+    background: #fff;
+    overflow-y: scroll;
+    flex-direction: column;
+    z-index: 9999;
+}
+
+#matches-container img {
+    margin-top: 100px;
+    align-self: center;
+    max-width: 150px;
+}
+
+div#close-window-container {
+    text-align: right;
+}
+
+span#close-window {
+    display: inline-block;
+    padding: 2px 10px;
+    border: 1px solid;
+    cursor: pointer;
+    align-self: end;
+    line-height: 1.25;
+}
+
+span#close-window:after {
+    font-size: 25px;
+    vertical-align: middle;
+    font-family: "Material Icons";
+    content: "\e5cd";
+    font-weight: bold;
+}
+
+/*cf7 and unsub form*/
+.wpcf7-spinner {
+    display: block;
+    margin: 10px auto;
+}
+
+span[data-name=wishes] .wpcf7-checkbox {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+
+span.wpcf7-form-control-wrap {
+    width: 100%;
+    display: inline-block;
+}
+
+.wpcf7 input[type=text], .wpcf7 input[type=email], .wpcf7 input[type=tel], .wpcf7 select, #unsub-form input[type=text], #unsub-form input[type=email] {
+    width: 100%;
+    height: 40px !important;
+    padding: 10px !important;
+    margin: 0 !important;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 0 0 1px #000;
+}
+
+span[data-name="wishes"] {
+    box-sizing: border-box;
+    padding: 10px 0;
+    background: #fff;
+    box-shadow: 0 0 1px #000;
+}
+
+.wpcf7 input[type=submit], #unsub-form input[type=submit] {
+    border: 1px solid;
+    padding: 8px 30px 6px 30px;
+    font-size: 24px;
+    background: #fff;
+    border-radius: 10px;
+    display: block;
+    width: 100%;
+    cursor: pointer;
+}
+
+.wpcf7 p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.wpcf7 input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.wpcf7-list-item {
+    font-size: 16px;
+    margin: 3px 6px;
+}
+
+@media (min-width: 700px) {
+    .wpcf7 div#contact-form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .wpcf7 div#contact-form p:last-child, .wpcf7 div#contact-form p:nth-child(7), .wpcf7 div#contact-form p:nth-child(8) {
+        grid-column: 1/-1;
+    }
+}
+
+@media (max-width: 700px) {
+    .wpcf7 p {
+        margin: 20px 0;
+    }
+}
+
+[data-name="acceptance-520"] span.wpcf7-list-item {
+    margin: 15px 0;
+}
+
+input[name=acceptance-520] {
+    margin: 0;
+}
+
+#unsub-form div {
+    margin: 10px 0;
+}
+
+/*other*/
+
+.result-user, .result-match {
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    width: 600px;
+    align-self: center;
+}
+
+@media(max-width: 700px) {
+    .result-user, .result-match { 
+        width: unset !important;
+    }
+}
+
+.result-user div, .result-match div {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 5px;
+    font-size: 14px;
+}
+
+.result-user div span:first-child, .result-match div span:first-child {
+    font-weight: 600;
+}
+
+.result-user {
+    background: #f4feff;
+}
+
+.result-match {
+    background: #f7fff7;
+}
+
+.result-user h2, .result-match h2 {
+    font-size: 20px !important;
+}
